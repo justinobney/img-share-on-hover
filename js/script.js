@@ -26,18 +26,22 @@ function faceButton(url, imgURL, title, summary) {
     return link_template;
 }
 
-function getShare() {
-    /*
-        get_short_url(test_options.post_img, test_options.bit_user, test_options.bit_key, function(resp){
-            if(resp.status_code === 200) {
-                //Get New Link
-            } else {
-                //use old link
-            }
+function getShare(el) {
+    get_short_url(test_options.post_img, test_options.bit_user, test_options.bit_key, function(resp){
+        
+        if(resp.status_code === 200) {
+            test_options.post_img = resp.data.url;
+        }
+        
+        $(el).hover(function () {
+            $(el).block({
+                message: tweetButton(test_options.post_img) + '<br />' + faceButton(test_options.post_img, test_options.post_img, test_options.post_title, test_options.post_desc) + '<br /><br />'
+            });
+        }, function () {
+            $(el).unblock();
         });
-     */
-    
-    return tweetButton(test_options.post_img) + '<br />' + faceButton(test_options.post_url, test_options.post_url, test_options.post_title, test_options.post_desc) + '<br /><br />';
+        
+    });
 }
 
 function get_short_url(long_url, login, api_key, func) {
@@ -47,14 +51,10 @@ function get_short_url(long_url, login, api_key, func) {
         "login": login,
         "longUrl": long_url
     }, function (response) {
-        func(response.data.url);
+        func(response);
     });
 }
 
-$('.block').hover(function () {
-    $('.block').block({
-        message: getShare()
-    });
-}, function () {
-    $('.block').unblock();
+$('.share-hover').each(function(idx, el){
+    getShare(el);
 });
