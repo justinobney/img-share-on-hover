@@ -4,7 +4,7 @@ function tweetButton(url, tw_user, title) {
     var tweeturl = 'http://twitter.com/share?url=' + encodeURI(url) + '&via=' + tw_user  + '&text=' + title;
 
     // Place the text on the page. Change body to wherever you want the button placed. 
-    return '<a title="' + title + '" href=" ' + tweeturl + ' " target="_blank"><img src="http://www.likebuttonshirt.com/img/tweet-button-small.png" alt="Share on Twitter" /></a>';
+    return '<a title="' + title + '" href=" ' + tweeturl + ' " target="_blank"><img src="http://dl.dropbox.com/u/2857953/tweet.png" alt="Share on Twitter" /></a>';
 };
 
 function faceButton(url, imgURL, title, summary) {
@@ -36,13 +36,9 @@ function getShare(el) {
             test_options.post_img = resp.data.url;
         }
         
-        $(el).hover(function () {
-            $(el).block({
-                message: tweetButton(test_options.post_img, test_options.tw_user, test_options.post_title) + '<br />' + faceButton(test_options.post_img, test_options.post_img, test_options.post_title, test_options.post_desc) + '<br /><br />'
-            });
-        }, function () {
-            $(el).unblock();
-        });
+        var share_buttons = tweetButton(test_options.post_img, test_options.tw_user, test_options.post_title) + '&nbsp;' + faceButton(test_options.post_img, test_options.post_img, test_options.post_title, test_options.post_desc);
+        
+        $(el).parent().parent().prepend(share_buttons);
         
     });
 }
@@ -57,7 +53,3 @@ function get_short_url(long_url, login, api_key, func) {
         func(response);
     });
 }
-
-$('.share-hover').each(function(idx, el){
-    getShare(el);
-});
