@@ -47,7 +47,7 @@ var _sharer = _sharer || {};
         getPopular();
     }
     function getPopular() {
-        var popular, popular_url = 'http://127.0.0.1:8020/img-share-on-hover/monkey.html';
+        var popular, popular_url = 'monkey.html';
         //'http://thepostmonkey.com/'
 
         $.get(popular_url, function(html) {
