@@ -10,21 +10,23 @@
 <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
     .gallery-item.top {
-        background: #7A66FF;
-    }
+		background: #91744C url(http://dl.dropbox.com/u/2857953/PostMonkey/Post-Hidden-BG.png) top no-repeat;
+		padding-top: 67px;
+	}
     .gallery-item.top > a {
-        display: inline;
+        opacity: 1.0;
     }
     .gallery-item > a {
-        display: none;
+        opacity: 0;
+        -webkit-transition: all 1s linear;
     }
     
     .gallery-item {
-    	-webkit-transition: background 1s linear;
-		-moz-transition: background 1s linear;
-		-ms-transition: background 1s linear;
-		-o-transition: background 1s linear;
-		transition: background 1s linear;
+    	-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-ms-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
     }
 </style>		
 	<!-- Meta Tags -->

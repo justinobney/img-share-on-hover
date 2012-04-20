@@ -4,13 +4,13 @@ function tweetButton(url, tw_user, title) {
     var tweeturl = 'http://twitter.com/share?url=' + encodeURI(url) + '&via=' + tw_user  + '&text=' + title;
 
     // Place the text on the page. Change body to wherever you want the button placed. 
-    return '<a title="' + title + '" href=" ' + tweeturl + ' " target="_blank"><img src="http://dl.dropbox.com/u/2857953/tweet.png" alt="Share on Twitter" /></a>';
+    return '<a title="' + title + '" href=" ' + tweeturl + ' " target="_blank"><img src="http://dl.dropbox.com/u/2857953/PostMonkey/twitter_button.png" alt="Share on Twitter" /></a>';
 };
 
 function faceButton(url, imgURL, title, summary) {
     var fb_url_template = 'http://www.facebook.com/sharer.php?s=100&p[url]=' + encodeURI(url) + '&p[images][0]=' + encodeURI(imgURL) + '&p[title]=' + encodeURI(title) + '&p[summary]=' + encodeURI(summary);
 
-    var link_template = '<a title="Post this Monkey on Facebook" href="' + fb_url_template + '" target="_blank"><img src="http://static.ivona.com/www/static/images/icons/share_facebook.png" alt="Share on Facebook" /></a>';
+    var link_template = '<a title="Post this Monkey on Facebook" href="' + fb_url_template + '" target="_blank"><img src="http://dl.dropbox.com/u/2857953/PostMonkey/facebook_button.png" alt="Share on Facebook" /></a>';
 
     return link_template;
 }
