@@ -550,6 +550,17 @@ var _wpcf7 = {"loaderUrl":"http:\/\/thepostmonkey.com\/wp-content\/plugins\/cont
     });
     
     $('#gallery-1 .gallery-item:first').addClass('top');
+    
+    $('#gallery-1 a').click(function(e){
+    	if($(this).hasClass('share_link')) {
+    		return;
+    	}
+    	e.preventDefault();
+    	var href = encodeURIComponent($(this).attr('href')),
+    		title = encodeURIComponent(document.title);
+    		
+		window.location = 'sharer.html?img=' + href + '&title=' + title;
+    });
 </script>
 <!--END body-->
 </body>
