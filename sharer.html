@@ -6,9 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <title>Adapt.js - Adaptive CSS</title>
 <link rel="stylesheet" href="css/master.css" />
+<style type="text/css" media="screen">
+	#the_img {
+		margin: 0 auto;
+		display: block;
+		width: 503px;
+	}
+	
+	body {
+		background: url(http://thepostmonkey.com/wp-content/themes/premiumpixels/images/bg-body.gif);
+	}
+</style>
 <noscript>
 <link rel="stylesheet" href="css/mobile.min.css" />
 </noscript>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
 // Edit to suit your needs.
 var ADAPT_CONFIG = {
@@ -42,30 +54,22 @@ var ADAPT_CONFIG = {
       The Post Monkey - Sharer
     </h1>
   </div>
-  <div class="grid_7">
-    Grid 7
+  <div class="grid_3">
+    <div id="leftCol">
+    	<img src="http://thepostmonkey.com/wp-content/uploads/2011/08/postmonkeylogo310x289.png" alt="The Post Monkey" width="270px" />
+    </div>
   </div>
-  <div class="grid_5">
-    Grid 5
+  <div class="grid_6">
+    <div id="img_box">
+    	<img id="the_img" src="" alt="Image" />
+    </div>
   </div>
+  <div class="grid_3">
+    <div id="popular_post"></div>
+  </div>
+  <div class="clear"></div>
+  <br /><br />
   <hr class="grid_12">
-  <div class="grid_6">
-	Grid 6
-  </div>
-  <div class="grid_6">
-    Grid 6
-  </div>
-  <hr class="grid_12" />
-  <div class="grid_4">
-    Grid 4
-  </div>
-  <div class="grid_4 push_4">
-    Grid 4 - Push 4
-  </div>
-  <div class="grid_4 pull_4">
-    Grid 4 - Pull 4
-  </div>
-  <hr class="grid_12" />
   <div class="grid_3">
     <p>
       <small>
@@ -88,5 +92,11 @@ var ADAPT_CONFIG = {
     </p>
   </div>
 </div>
+<script type="text/javascript" src="js/sharer.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		_sharer.init();
+	});
+</script>
 </body>
 </html>
