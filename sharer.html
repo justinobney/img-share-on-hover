@@ -13,6 +13,14 @@
 		width: 95%;
 	}
 	
+	#short_link {
+		display: block;
+		border: solid 1px brown;
+		margin: 0;
+		width: 100%;
+		font-size: 24px;
+	}
+	
 	body {
 		background: url(http://thepostmonkey.com/wp-content/themes/premiumpixels/images/bg-body.gif);
 	}
@@ -56,7 +64,16 @@ var ADAPT_CONFIG = {
   </div>
   <div class="grid_3">
     <div id="leftCol">
-    	<img src="http://thepostmonkey.com/wp-content/uploads/2011/08/postmonkeylogo310x289.png" alt="The Post Monkey" width="95%" />
+    	<a href="http://thepostmonkey.com/">
+    		<img src="http://thepostmonkey.com/wp-content/uploads/2011/08/postmonkeylogo310x289.png" alt="The Post Monkey" width="95%" />
+    	</a>
+    	<br />
+    	<h2>Share Link:</h2>
+    	<input type="text" id="short_link" onfocus="setTimeout(function(){document.getElementById('short_link').select()},250);" />
+    	<br />
+    	<div id="share_containter">
+    		<h2>Share On:</h2>
+    	</div>
     </div>
   </div>
   <div class="grid_6">
