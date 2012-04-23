@@ -9,12 +9,15 @@ body {
   color: #333;
 }
 
-h1 {
-  background: #eee;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 90px 10px 15px;
-  text-shadow: #fff 0 1px 0;
+h1
+{
+    background: #442D17;
+    border-bottom: 1px solid #CCC;
+    padding: 10px 90px 10px 15px;
+    text-shadow: 1px 1px 0 #4F3636;
+    color: #F5F3BA;
 }
+
 
 h2,
 h3,
