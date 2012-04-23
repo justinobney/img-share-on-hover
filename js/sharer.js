@@ -100,7 +100,8 @@ var _sharer = _sharer || {};
                 test_options.post_img = resp.data.url;
             }
 
-            var share_buttons = faceButton(test_options.post_img, test_options.post_img, test_options.post_title, test_options.post_desc) + '&nbsp;' + tweetButton(test_options.post_img, test_options.tw_user, test_options.post_title);
+            var share_buttons = faceButton(test_options.post_img, _sharer.querystring().img, test_options.post_title, test_options.post_desc) + '&nbsp;' + tweetButton(test_options.post_img, test_options.tw_user, test_options.post_title);
+            
             $('#share_containter').append(share_buttons);
 
             $('#short_link').val(test_options.post_img);
