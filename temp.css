@@ -1,0 +1,19 @@
+    .gallery-item.top {
+        background: #91744C url(http://dl.dropbox.com/u/2857953/PostMonkey/Post-Hidden-BG.png) top no-repeat;
+        padding-top: 67px;
+    }
+    .gallery-item.top > a {
+        opacity: 1.0;
+    }
+    .gallery-item > a {
+        opacity: 0;
+        -webkit-transition: all 1s linear;
+    }
+    
+    .gallery-item {
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
